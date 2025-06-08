@@ -1,0 +1,36 @@
+{
+  "name": "astonoquegraphic_backend",
+  "version": "1.0.0",
+  "description": "Backend for Astonoquegraphic webpage",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "express",
+    "mongodb"
+  ],
+  "author": "Vivek Kandoliya",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/multer": "^1.4.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.14.0",
+    "multer": "^2.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
