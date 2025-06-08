@@ -15,8 +15,14 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 
 //serving static folder
-const imagesPath = path.join(__dirname, "assets/images");
+const isProduction = process.env.NODE_ENV === 'production';
+const imagesPath = isProduction 
+  ? path.join(__dirname, '../src/assets/images')  // Production path
+  : path.join(__dirname, 'assets/images');        // Development path
+
+console.log("Environment:", process.env.NODE_ENV);
 console.log("Images directory path:", imagesPath);
+
 app.use("/images", express.static(imagesPath));
 
 app.use(express.urlencoded({ extended: true })); // For URL-encoded form data

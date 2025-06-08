@@ -10,7 +10,6 @@ if (!mongoURI) {
 
 const connectDB = async () => {
   try{
-    console.log("mongo URI : ", mongoURI);
     await mongoose.connect(mongoURI)
     console.log('Connected to Database successfully!');
   }catch(error){
