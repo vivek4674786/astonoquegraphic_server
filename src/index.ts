@@ -27,7 +27,7 @@ app.use("/images", express.static(imagesPath));
 
 app.use(express.urlencoded({ extended: true })); // For URL-encoded form data
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174'],
+  origin: ['http://localhost:5173', 'http://localhost:5174','https://astonoquegraphic.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   // allowedHeaders: ['Content-Type', 'Authorization'],
 }));
